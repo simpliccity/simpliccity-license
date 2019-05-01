@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>org.simpliccity</groupId>
 		<artifactId>simpliccity-parent</artifactId>
-		<version>7</version>
+		<version>10</version>
 		<relativePath>../simpliccity-parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>simpliccity-license</artifactId>
