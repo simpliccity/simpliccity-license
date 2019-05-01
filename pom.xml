@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>org.simpliccity</groupId>
 		<artifactId>simpliccity-parent</artifactId>
-		<version>7</version>
+		<version>10</version>
 		<relativePath>../simpliccity-parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>simpliccity-license</artifactId>
@@ -31,6 +31,31 @@
 		License resources for use by all Simpliccity.org projects.
 	</description>
 
+	<profiles>
+		<profile>
+			<id>azure-devops</id>
+			<repositories>
+				<repository>
+					<id>dev-azure-com-simpliccity-maven</id>
+					<url>https://pkgs.dev.azure.com/Simpliccity/_packaging/Maven/maven/v1</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+
+	<distributionManagement>
+		<site>
+			<id>icc.simpliccity.site</id>
+			<url>dav:http://nexus.icc.local/nexus/content/sites/icc.simpliccity.site/${project.groupId}/${project.version}/</url>
+		</site>
+	</distributionManagement>
+	
 	<build>
 	
 		<plugins>
